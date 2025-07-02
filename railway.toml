@@ -2,5 +2,5 @@
 builder = "dockerfile"
 
 [deploy]
+service = "discord-bot"  # Forces Railway to treat it as a service
 start_command = "python main.py"
-service = "discord-bot"  # Explicitly declare as a service
