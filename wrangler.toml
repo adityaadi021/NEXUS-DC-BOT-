@@ -1,0 +1,10 @@
+name = "discord-bot"
+main = "src/worker.js"
+compatibility_date = "2025-07-02"
+
+[build]
+command = "npm install @cloudflare/pyodide"
+
+[[migrations]]
+tag = "pyodide"
+new_classes = ["PythonRuntime"]
