@@ -12,7 +12,12 @@ from bs4 import BeautifulSoup
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-# Get token from environment
+from keep_alive import keep_alive
+keep_alive()  
+
+CONFIG_FILE = "/home/runner/@gopalregar245/bot_config.json"
+SOCIAL_FILE = "/home/runner/@gopalregar245/social_trackers.json"
+
 token = os.getenv("DISCORD_TOKEN")
 if not token:
     print("❌ CRITICAL ERROR: Missing DISCORD_TOKEN")
