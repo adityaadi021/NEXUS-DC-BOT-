@@ -15,8 +15,8 @@ from googleapiclient.errors import HttpError
 from keep_alive import keep_alive
 keep_alive()  
 
-CONFIG_FILE = "/home/runner/@gopalregar245/bot_config.json"
-SOCIAL_FILE = "/home/runner/@gopalregar245/social_trackers.json"
+CONFIG_FILE = "bot_config.json"
+SOCIAL_FILE = "social_trackers.json"
 
 token = os.getenv("DISCORD_TOKEN")
 if not token:
