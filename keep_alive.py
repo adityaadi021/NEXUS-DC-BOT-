@@ -1,15 +1,15 @@
 from flask import Flask
-import threading
+from threading import Thread
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Bot is alive!"
+    return "Discord Bot is Alive!"
 
 def run():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080)  # Must use port 8080 for Render
 
 def keep_alive():
-    t = threading.Thread(target=run)
-    t.start()
+    server = Thread(target=run, daemon=True)  # Run in a daemon thread
+    server.start()
